@@ -10,11 +10,13 @@ void main()
     initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
     printf("Az Kafle\n");
     setcolor(7);
-    rectangle(60,80,150,200);
-    rectangle(95,140,120,200);
-    line(60,80,100,15);
-    line(100,15,150,80);
-    circle(100,60,10);
+    rectangle(70,90,160,210);
+    rectangle(100,160,130,210);
+    rectangle(80,110,90,120);
+    rectangle(140,110,150,120);
+    line(70,90,110,25);
+    line(110,25,160,90);
+    circle(110,70,10);
     getch();
     closegraph();
 }

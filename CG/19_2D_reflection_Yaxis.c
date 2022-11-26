@@ -14,15 +14,15 @@ void PolyLine()
     line(320,0,320,480);
     for (iCnt=0; iCnt<3; iCnt++)
     {
-        line(PolygonPoints[iCnt][0],PolygonPoints[iCnt][1],
-        polygonPoints[(iCnt+1)%3][0],PolygonPoints[(iCnt+1)%3][1]);
+	line(PolygonPoints[iCnt][0],PolygonPoints[iCnt][1],
+	polygonPoints[(iCnt+1)%3][0],PolygonPoints[(iCnt+1)%3][1]);
     }
 }
 void Reflect()
 {
     float Angle;
     int iCnt;
-    int Tx,Ty; 
+    int Tx,Ty;
     for (iCnt=0; iCnt<3; iCnt++)
     PolygonPoints[iCnt][0] = (640 - PolygonPoints[iCnt][0]);
 }
@@ -34,8 +34,8 @@ void main()
     printf("Az Kafle\n");
     for (iCnt=0; iCnt<3; iCnt++)
     {
-        PolygonPoints[iCnt][0] += 320;
-        PolygonPoints[iCnt][1] = 240 - PolygonPoints[iCnt][1];
+	PolygonPoints[iCnt][0] += 320;
+	PolygonPoints[iCnt][1] = 240 - PolygonPoints[iCnt][1];
     }
     PolyLine();
     getch();

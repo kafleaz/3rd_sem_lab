@@ -1,4 +1,4 @@
-//Program for 3D scaling
+ //Program for 3D scaling
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>

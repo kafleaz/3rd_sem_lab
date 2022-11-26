@@ -25,14 +25,14 @@ void main()
     cleardevice();
     rotate();
     getch();
- 
+
 }
-void draw() 
+void draw()
 {
-    bar3d(x1,y1,x2,y2,depth,7);
+    bar3d(x1,y1,x2,y2,depth,3);
     outtextxy(x1+50,y1-15,"Object");
 }
-void rotate() 
+void rotate()
 {
     float t;
     int a1,b1,a2,b2,dep;
@@ -49,5 +49,5 @@ void rotate()
     dep=(a1-a2)/4;
     bar3d(a1,b1,a2,b2,dep,7);
     outtextxy(a1+50,b1-15,"Image");
-    setcolor(15);
+
 }

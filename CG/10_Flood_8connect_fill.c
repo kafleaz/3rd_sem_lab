@@ -12,7 +12,7 @@ void main()
     clrscr();
     detectgraph(&gd,&gm);
     initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
-    printf("Az Kafle\n");
+    outtextxy(150,150,"Az Kafle");
     rectangle(200,200,250,250);
     flood(220,220,7,0);
     getch(); 

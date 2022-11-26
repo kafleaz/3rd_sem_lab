@@ -12,8 +12,8 @@ void main()
     detectgraph(&gd,&gm);
     initgraph(&gd,&gm,"C:\\TurboC3\\BGI");
     printf("Az Kafle\n");
-    rectangle(100,100,150,150);
-    flood(110,110,7,0);
+    rectangle(95,95,155,135);
+    flood(100,100,7,0);
     getch(); 
 }
 void flood(int x,int y, int fill_col, int old_col)
