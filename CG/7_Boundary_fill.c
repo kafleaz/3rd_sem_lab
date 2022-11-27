@@ -9,9 +9,9 @@ void boundary_fill(int x, int y, int fcolor, int bcolor)
     if ((getpixel(x, y) != bcolor) && (getpixel(x, y) != fcolor))
     { 
         putpixel(x, y, fcolor);
-        boundary_fill(x + 1, y, fcolor, bcolor); 
+        boundary_fill(x + 1, y, fcolor, bcolor);
+        boundary_fill(x, y + 1, fcolor, bcolor); 
         boundary_fill(x - 1, y, fcolor, bcolor); 
-        boundary_fill(x, y + 1, fcolor, bcolor);
         boundary_fill(x, y - 1, fcolor, bcolor);
     }
 }
@@ -33,4 +33,6 @@ void main()
     boundary_fill(x, y, fcolor, bcolor); 
     delay(1000);
     getch();
+    closegraphh();
+    return 0;
 }
