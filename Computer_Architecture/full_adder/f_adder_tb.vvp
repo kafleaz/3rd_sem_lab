@@ -1,0 +1,70 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01189590 .scope module, "f_adder" "f_adder" 2 1;
+ .timescale 0 0;
+L_01188300 .functor XOR 1, C4<z>, C4<z>, C4<0>, C4<0>;
+L_01181618 .functor AND 1, C4<z>, C4<z>, C4<1>, C4<1>;
+L_01183FA8 .functor XOR 1, L_01188300, C4<z>, C4<0>, C4<0>;
+L_01184018 .functor AND 1, L_01188300, C4<z>, C4<1>, C4<1>;
+L_01184088 .functor OR 1, L_01181618, L_01184018, C4<0>, C4<0>;
+v01188250_0 .net "a", 0 0, C4<z>; 0 drivers
+v011882A8_0 .net "b", 0 0, C4<z>; 0 drivers
+v011C3E18_0 .net "c1", 0 0, L_01181618; 1 drivers
+v011C3E70_0 .net "c2", 0 0, L_01184018; 1 drivers
+v011C3EC8_0 .net "carry", 0 0, L_01184088; 1 drivers
+v01181568_0 .net "cin", 0 0, C4<z>; 0 drivers
+v011815C0_0 .net "cry", 0 0, C4<z>; 0 drivers
+v0118D8A0_0 .net "s1", 0 0, L_01188300; 1 drivers
+v0118DAB0_0 .net "sum", 0 0, L_01183FA8; 1 drivers
+S_011893F8 .scope module, "f_adder_tb" "f_adder_tb" 3 2;
+ .timescale 0 0;
+v0118D7F0_0 .var "a", 0 0;
+v0118DA00_0 .var "b", 0 0;
+v0118DBB8_0 .var "cin", 0 0;
+    .scope S_011893F8;
+T_0 ;
+    %vpi_call 3 7 "$dumpfile", "f_adder.vcd";
+    %vpi_call 3 8 "$dumpvars", 1'sb0, S_011893F8;
+    %set/v v0118D7F0_0, 0, 1;
+    %set/v v0118DA00_0, 0, 1;
+    %set/v v0118DBB8_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 0, 1;
+    %set/v v0118DA00_0, 0, 1;
+    %set/v v0118DBB8_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 0, 1;
+    %set/v v0118DA00_0, 1, 1;
+    %set/v v0118DBB8_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 0, 1;
+    %set/v v0118DA00_0, 1, 1;
+    %set/v v0118DBB8_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 1, 1;
+    %set/v v0118DA00_0, 0, 1;
+    %set/v v0118DBB8_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 1, 1;
+    %set/v v0118DA00_0, 0, 1;
+    %set/v v0118DBB8_0, 1, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 1, 1;
+    %set/v v0118DA00_0, 1, 1;
+    %set/v v0118DBB8_0, 0, 1;
+    %delay 1, 0;
+    %set/v v0118D7F0_0, 1, 1;
+    %set/v v0118DA00_0, 1, 1;
+    %set/v v0118DBB8_0, 1, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "./f_adder.v";
+    "f_adder_tb.v";
